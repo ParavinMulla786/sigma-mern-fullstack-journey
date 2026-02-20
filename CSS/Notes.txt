@@ -1,0 +1,93 @@
+CSS -
+CSS Box Model
+The CSS Box model defines how elements are rendered and how their dimensions are calculated.
+
+ 
+
+It describes the structure of an element as a rectangular box that has content, padding, a border, and a margin.
+
+ 
+
+The box model consists of four main components, which are
+ 
+
+1.  Content
+
+The innermost component of the box model is the actual content of the element. It can be text, image, video, etc.
+
+ 
+
+The content area is defined by the width and height properties.
+
+ 
+
+2.  Padding
+
+The space between the actual content and the border of the element is the padding.
+
+
+
+3.  Border
+
+The border surrounds the content and padding and gives the visual border of the element.
+
+ 
+
+4.  Margin
+
+The margin is the space outside the element that separates it from other elements in the layout.
+
+ 
+
+ 
+
+Calculating the total dimension of the element
+ 
+
+The total width and height of the element is calculated with the formula:
+
+ 
+
+Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+
+ 
+
+Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin
+
+
+
+
+CSS Display
+The display Property
+
+ 
+
+The display property is used to specify how an element is shown on a web page.
+ 
+
+Every HTML element has a default display value, depending on what type of element it is. The default display value for most elements is block or inline.
+
+ 
+
+The display property is used to change the default display behavior of HTML elements.
+
+
+
+Inline Elements:
+
+ 
+
+An inline element DOES NOT start on a new line and only takes up as much width as necessary.
+
+ 
+
+This is an inline <span> element inside a paragraph. Examples of inline elements:
+
+<span>
+
+<a>
+
+<img>
+
+
+
