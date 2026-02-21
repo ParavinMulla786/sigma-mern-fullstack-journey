@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+
+    <!-- Form starts here -->
+    <form action="/action" method="post">
+        <!-- 
+        action="/action" → where form data will be sent
+        method="post" → sends data securely
+        -->
+
+        <h2>User Registration Form</h2>
+
+        <!-- Username Field -->
+        <div>
+            <label for="username">Username:</label>
+            <!-- for="username" connects label with input id -->
+            <input type="text" 
+                   id="username" 
+                   name="username"
+                   placeholder="Enter Username" 
+                   required>
+        </div>
+
+        <br>
+
+        <!-- Password Field -->
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" 
+                   id="password" 
+                   name="password"
+                   placeholder="Enter Password" 
+                   required>
+        </div>
+
+        <br>
+
+        <!-- Age Field -->
+        <div>
+            <label for="age">Enter Your Age:</label>
+            <input type="number" 
+                   id="age" 
+                   name="age"
+                   placeholder="Age"
+                   min="1" 
+                   max="100">
+        </div>
+
+        <br>
+
+        <!-- Time Field -->
+        <div>
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <br>
+
+        <!-- Color Field -->
+        <div>
+            <label for="color">Choose Color:</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <!-- Submits form data -->
+
+        <button type="reset">Reset</button>
+        <!-- Clears all form fields -->
+
+    </form>
+    <!-- Form ends here -->
+
+</body>
+</html>
