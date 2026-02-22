@@ -2,59 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Makes website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Example</title>
 </head>
 <body>
 
-    <!-- Form starts here -->
+    <!-- ================= FORM START ================= -->
+    <!-- 
+        action="/action" → Data will be sent to this URL
+        method="post" → Data is sent securely (not visible in URL)
+    -->
     <form action="/action" method="post">
-        <!-- 
-        action="/action" → where form data will be sent
-        method="post" → sends data securely
-        -->
 
         <h2>User Registration Form</h2>
 
-        <!-- Username Field -->
+        <!-- ========== TEXT INPUT ========== -->
         <div>
+            <!-- label connects with input using for & id -->
             <label for="username">Username:</label>
-            <!-- for="username" connects label with input id -->
             <input type="text" 
-                   id="username" 
+                   id="username"
                    name="username"
-                   placeholder="Enter Username" 
+                   placeholder="Enter Username"
                    required>
+            <!-- required → field must be filled -->
         </div>
 
         <br>
 
-        <!-- Password Field -->
+        <!-- ========== PASSWORD INPUT ========== -->
         <div>
             <label for="password">Password:</label>
-            <input type="password" 
-                   id="password" 
+            <input type="password"
+                   id="password"
                    name="password"
-                   placeholder="Enter Password" 
+                   placeholder="Enter Password"
                    required>
+            <!-- password hides characters -->
         </div>
 
         <br>
 
-        <!-- Age Field -->
+        <!-- ========== NUMBER INPUT ========== -->
         <div>
             <label for="age">Enter Your Age:</label>
-            <input type="number" 
-                   id="age" 
+            <input type="number"
+                   id="age"
                    name="age"
                    placeholder="Age"
-                   min="1" 
+                   min="1"
                    max="100">
+            <!-- min & max → range restriction -->
         </div>
 
         <br>
 
-        <!-- Time Field -->
+        <!-- ========== CHECKBOX (Single) ========== -->
+        <div>
+            <input type="checkbox" id="adult" name="adult" checked>
+            <label for="adult">I am 18+</label>
+            <!-- checked → selected by default -->
+        </div>
+
+        <br>
+
+        <!-- ========== RADIO BUTTONS ========== -->
+        <div>
+            <p>Select Your Favorite Fruit:</p>
+
+            <input type="radio" name="fruit" id="apple" value="apple">
+            <label for="apple">Apple</label>
+
+            <input type="radio" name="fruit" id="mango" value="mango">
+            <label for="mango">Mango</label>
+
+            <input type="radio" name="fruit" id="orange" value="orange">
+            <label for="orange">Orange</label>
+
+            <!-- Same name → only one can be selected -->
+        </div>
+
+        <br>
+
+        <!-- ========== MULTIPLE CHECKBOX ========== -->
+        <div>
+            <p>Choose Your Subjects:</p>
+
+            <input type="checkbox" id="maths" name="subjects[]" value="maths">
+            <label for="maths">Maths</label>
+
+            <input type="checkbox" id="science" name="subjects[]" value="science">
+            <label for="science">Science</label>
+
+            <input type="checkbox" id="english" name="subjects[]" value="english">
+            <label for="english">English</label>
+
+            <!-- subjects[] → allows multiple values -->
+        </div>
+
+        <br>
+
+        <!-- ========== SELECT DROPDOWN ========== -->
+        <div>
+            <label for="profession">Choose Your Profession:</label>
+            <select name="profession" id="profession">
+                <option value="">Select Your Profession</option>
+                <option value="student">Student</option>
+                <option value="developer">Developer</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- ========== TIME INPUT ========== -->
         <div>
             <label for="time">Select Time:</label>
             <input type="time" id="time" name="time">
@@ -62,7 +123,7 @@
 
         <br>
 
-        <!-- Color Field -->
+        <!-- ========== COLOR INPUT ========== -->
         <div>
             <label for="color">Choose Color:</label>
             <input type="color" id="color" name="color">
@@ -70,15 +131,15 @@
 
         <br><br>
 
-        <!-- Buttons -->
+        <!-- ========== BUTTONS ========== -->
         <button type="submit">Submit</button>
-        <!-- Submits form data -->
+        <!-- Sends form data -->
 
         <button type="reset">Reset</button>
-        <!-- Clears all form fields -->
+        <!-- Clears form data -->
 
     </form>
-    <!-- Form ends here -->
+    <!-- ================= FORM END ================= -->
 
 </body>
 </html>
