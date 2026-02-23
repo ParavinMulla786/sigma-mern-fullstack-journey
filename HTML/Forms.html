@@ -1,73 +1,101 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+
 <html lang="en">
+<!-- Root element of HTML page, lang="en" means English language -->
+
 <head>
     <meta charset="UTF-8">
-    <!-- Makes website responsive -->
+    <!-- Supports all characters (Unicode support) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Example</title>
+    <!-- Makes website responsive on mobile devices -->
+
+    <title>User Registration Form</title>
+    <!-- Title shown on browser tab -->
 </head>
+
 <body>
+    <!-- Body contains all visible content -->
 
-    <!-- ================= FORM START ================= -->
-    <!-- 
-        action="/action" → Data will be sent to this URL
-        method="post" → Data is sent securely (not visible in URL)
-    -->
+    <h2>User Registration Form</h2>
+    <!-- Heading tag -->
+
     <form action="/action" method="post">
+        <!-- 
+            form tag collects user data
+            action → where data will be sent
+            method="post" → data sent securely (not visible in URL)
+        -->
 
-        <h2>User Registration Form</h2>
-
-        <!-- ========== TEXT INPUT ========== -->
+        <!-- TEXT INPUT -->
         <div>
-            <!-- label connects with input using for & id -->
             <label for="username">Username:</label>
+            <!-- label connects with input using for & id -->
+
             <input type="text" 
-                   id="username"
-                   name="username"
-                   placeholder="Enter Username"
+                   id="username" 
+                   name="username" 
+                   placeholder="Enter Username" 
                    required>
-            <!-- required → field must be filled -->
+            <!-- 
+                type="text" → normal text input
+                name → used to send data to server
+                placeholder → hint text
+                required → compulsory field
+            -->
         </div>
 
         <br>
 
-        <!-- ========== PASSWORD INPUT ========== -->
+        <!-- PASSWORD INPUT -->
         <div>
             <label for="password">Password:</label>
-            <input type="password"
-                   id="password"
-                   name="password"
-                   placeholder="Enter Password"
+
+            <input type="password" 
+                   id="password" 
+                   name="password" 
+                   placeholder="Enter Password" 
                    required>
-            <!-- password hides characters -->
+            <!-- 
+                type="password" → hides characters
+            -->
         </div>
 
         <br>
 
-        <!-- ========== NUMBER INPUT ========== -->
+        <!-- NUMBER INPUT -->
         <div>
-            <label for="age">Enter Your Age:</label>
-            <input type="number"
-                   id="age"
-                   name="age"
-                   placeholder="Age"
-                   min="1"
-                   max="100">
-            <!-- min & max → range restriction -->
+            <label for="age">Age:</label>
+
+            <input type="number" 
+                   id="age" 
+                   name="age" 
+                   min="1" 
+                   max="100" 
+                   placeholder="Enter Age">
+            <!-- 
+                type="number" → allows only numbers
+                min & max → range restriction
+            -->
         </div>
 
         <br>
 
-        <!-- ========== CHECKBOX (Single) ========== -->
+        <!-- SINGLE CHECKBOX -->
         <div>
-            <input type="checkbox" id="adult" name="adult" checked>
-            <label for="adult">I am 18+</label>
+            <input type="checkbox" 
+                   id="adult" 
+                   name="adult" 
+                   checked>
             <!-- checked → selected by default -->
+
+            <label for="adult">I am 18+</label>
         </div>
 
         <br>
 
-        <!-- ========== RADIO BUTTONS ========== -->
+        <!-- RADIO BUTTONS -->
         <div>
             <p>Select Your Favorite Fruit:</p>
 
@@ -80,34 +108,46 @@
             <input type="radio" name="fruit" id="orange" value="orange">
             <label for="orange">Orange</label>
 
-            <!-- Same name → only one can be selected -->
+            <!-- 
+                Same name="fruit" 
+                → only one option can be selected
+                value → actual data sent to server
+            -->
         </div>
 
         <br>
 
-        <!-- ========== MULTIPLE CHECKBOX ========== -->
+        <!-- MULTIPLE CHECKBOX -->
         <div>
-            <p>Choose Your Subjects:</p>
+            <p>Select Subjects:</p>
 
-            <input type="checkbox" id="maths" name="subjects[]" value="maths">
+            <input type="checkbox" name="subjects[]" id="maths" value="maths">
             <label for="maths">Maths</label>
 
-            <input type="checkbox" id="science" name="subjects[]" value="science">
+            <input type="checkbox" name="subjects[]" id="science" value="science">
             <label for="science">Science</label>
 
-            <input type="checkbox" id="english" name="subjects[]" value="english">
+            <input type="checkbox" name="subjects[]" id="english" value="english">
             <label for="english">English</label>
 
-            <!-- subjects[] → allows multiple values -->
+            <!-- 
+                subjects[] → allows multiple values 
+                Multiple checkboxes can be selected
+            -->
         </div>
 
         <br>
 
-        <!-- ========== SELECT DROPDOWN ========== -->
+        <!-- DROPDOWN -->
         <div>
-            <label for="profession">Choose Your Profession:</label>
+            <label for="profession">Profession:</label>
+
             <select name="profession" id="profession">
-                <option value="">Select Your Profession</option>
+                <!-- select creates dropdown -->
+
+                <option value="">Select Profession</option>
+                <!-- default option -->
+
                 <option value="student">Student</option>
                 <option value="developer">Developer</option>
             </select>
@@ -115,31 +155,58 @@
 
         <br>
 
-        <!-- ========== TIME INPUT ========== -->
+        <!-- TIME INPUT -->
         <div>
             <label for="time">Select Time:</label>
             <input type="time" id="time" name="time">
+            <!-- time picker input -->
         </div>
 
         <br>
 
-        <!-- ========== COLOR INPUT ========== -->
+        <!-- RANGE INPUT -->
+        <div>
+            <label for="vol">Select Volume:</label>
+            <input type="range" id="vol" name="vol" min="0" max="100">
+            <!-- slider input -->
+        </div>
+
+        <br>
+
+        <!-- TEXTAREA -->
+        <div>
+            <label for="feedback">Feedback:</label>
+
+            <textarea id="feedback" 
+                      name="feedback" 
+                      rows="4" 
+                      cols="30"
+                      placeholder="Write your feedback here"></textarea>
+            <!-- 
+                textarea → multi-line text input
+                rows & cols → size control
+            -->
+        </div>
+
+        <br>
+
+        <!-- COLOR INPUT -->
         <div>
             <label for="color">Choose Color:</label>
             <input type="color" id="color" name="color">
+            <!-- opens color picker -->
         </div>
 
         <br><br>
 
-        <!-- ========== BUTTONS ========== -->
+        <!-- BUTTONS -->
         <button type="submit">Submit</button>
-        <!-- Sends form data -->
+        <!-- sends form data -->
 
         <button type="reset">Reset</button>
-        <!-- Clears form data -->
+        <!-- clears all form fields -->
 
     </form>
-    <!-- ================= FORM END ================= -->
 
 </body>
 </html>
