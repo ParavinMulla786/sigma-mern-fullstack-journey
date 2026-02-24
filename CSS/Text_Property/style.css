@@ -1,0 +1,21 @@
+h1{
+    text-align: right;
+    width: 50%;
+    /* border: solid; */
+    text-decoration: red wavy underline;
+}
+
+h3{
+    text-align: right;
+    text-decoration: red line-through;
+}
+h2{
+    font-weight: normal;
+    text-decoration:  dotted overline;
+    letter-spacing: 10px;
+}
+p{
+    line-height: 2.5;
+    text-align: justify;
+    font-weight: 400;
+}
