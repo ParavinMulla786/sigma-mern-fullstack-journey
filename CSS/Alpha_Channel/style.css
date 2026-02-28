@@ -1,0 +1,82 @@
+/* 
+=====================================================
+1️⃣ WHAT IS ALPHA CHANNEL?
+=====================================================
+
+RGBA stands for:
+R → Red (0–255)
+G → Green (0–255)
+B → Blue (0–255)
+A → Alpha (0–1)
+
+Alpha controls transparency level.
+
+0   → Fully Transparent
+0.5 → 50% Transparent
+1   → Fully Visible
+
+IMPORTANT:
+rgba() only affects the BACKGROUND color,
+NOT the text or child elements.
+*/
+
+/* Alpha Channel Example */
+.alpha-box {
+    height: 200px;
+    width: 200px;
+
+    /* 
+        rgba(255,0,0,0.5)
+        Red color with 50% transparency
+    */
+    background-color: rgba(255, 0, 0, 0.5);
+
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+}
+
+
+/* 
+=====================================================
+2️⃣ WHAT IS OPACITY?
+=====================================================
+
+opacity property controls the transparency of
+the ENTIRE ELEMENT including:
+
+✔ Background
+✔ Text
+✔ Images
+✔ Child elements
+
+Syntax:
+opacity: value;
+
+Value Range:
+0 → Fully Transparent
+1 → Fully Visible
+
+IMPORTANT INTERVIEW DIFFERENCE:
+
+rgba() → Only background becomes transparent
+opacity → Entire element becomes transparent
+*/
+
+/* Opacity Example */
+#opacity-box {
+    height: 200px;
+    width: 200px;
+
+    background-color: yellow;
+
+    /* 
+        opacity: 0.5;
+        Makes entire box + text + button transparent
+    */
+    opacity: 0.5;
+
+    text-align: center;
+    padding-top: 50px;
+}
