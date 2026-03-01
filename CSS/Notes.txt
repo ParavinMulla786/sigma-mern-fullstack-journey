@@ -1,93 +1,127 @@
-CSS -
-CSS Box Model
-The CSS Box model defines how elements are rendered and how their dimensions are calculated.
+CSS – BOX MODEL
 
- 
+The CSS Box Model defines how elements are displayed on a webpage and how their width and height are calculated.
 
-It describes the structure of an element as a rectangular box that has content, padding, a border, and a margin.
+Every HTML element is treated as a rectangular box.
 
- 
+The box model has four main components:
 
-The box model consists of four main components, which are
- 
+Content
+The content is the actual data inside the element.
+It can be text, image, video, etc.
+The content area is controlled using width and height properties.
 
-1.  Content
+Example:
+div {
+width: 200px;
+height: 100px;
+}
 
-The innermost component of the box model is the actual content of the element. It can be text, image, video, etc.
+Padding
+Padding is the space between the content and the border.
+It creates space inside the element.
+Padding is transparent.
 
- 
+Example:
+div {
+padding: 20px;
+}
 
-The content area is defined by the width and height properties.
+You can also set padding individually:
+padding-top
+padding-right
+padding-bottom
+padding-left
 
- 
+Border
+The border surrounds the content and padding.
+It gives a visible outline to the element.
 
-2.  Padding
+Example:
+div {
+border: 2px solid black;
+}
 
-The space between the actual content and the border of the element is the padding.
+Margin
+Margin is the space outside the border.
+It creates space between elements.
 
+Example:
+div {
+margin: 20px;
+}
 
+CALCULATING TOTAL WIDTH AND HEIGHT
 
-3.  Border
+Total Width =
+Width
 
-The border surrounds the content and padding and gives the visual border of the element.
+Left Padding + Right Padding
 
- 
+Left Border + Right Border
 
-4.  Margin
+Left Margin + Right Margin
 
-The margin is the space outside the element that separates it from other elements in the layout.
+Total Height =
+Height
 
- 
+Top Padding + Bottom Padding
 
- 
+Top Border + Bottom Border
 
-Calculating the total dimension of the element
- 
+Top Margin + Bottom Margin
 
-The total width and height of the element is calculated with the formula:
+By default:
+box-sizing: content-box;
 
- 
+If we use:
+box-sizing: border-box;
 
-Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+Then padding and border are included inside the width and height.
 
- 
+CSS DISPLAY PROPERTY
 
-Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin
+The display property specifies how an element is shown on a webpage.
 
+Every HTML element has a default display value.
+Most common default values are block and inline.
 
+INLINE ELEMENTS
 
+An inline element:
 
-CSS Display
-The display Property
+Does not start on a new line
 
- 
+Takes only required width
 
-The display property is used to specify how an element is shown on a web page.
- 
+Appears in the same line
 
-Every HTML element has a default display value, depending on what type of element it is. The default display value for most elements is block or inline.
+Examples:
+span
+a
+img
 
- 
+Example:
 
-The display property is used to change the default display behavior of HTML elements.
+<p>This is <span>inline</span> text.</p>
 
+BLOCK ELEMENTS
 
+A block element:
 
-Inline Elements:
+Starts on a new line
 
- 
+Takes full width available
 
-An inline element DOES NOT start on a new line and only takes up as much width as necessary.
+Examples:
+div
+p
+h1 to h6
 
- 
+INLINE-BLOCK
 
-This is an inline <span> element inside a paragraph. Examples of inline elements:
+display: inline-block;
 
-<span>
+Stays in the same line
 
-<a>
-
-<img>
-
-
-
+Allows width and height like block elements
