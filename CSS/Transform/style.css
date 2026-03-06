@@ -1,0 +1,184 @@
+/* ===========================
+   General Section Styling
+   =========================== */
+/* The <section> tag is used to group related content.
+   Here, we give it a top margin to separate it visually
+   from the top of the page. */
+section {
+    margin-top: 100px; /* Push the section down from the top */
+}
+
+/* ===========================
+   General Div Styling
+   =========================== */
+/* All <div> elements share these common styles. 
+   In interviews, you might be asked about box model properties.
+   - height, width: define the size of the box.
+   - text-align: centers text horizontally inside the div.
+   - background-color: fills the background with color.
+   - border: defines a boundary around the div.
+   - margin: spacing outside the element.
+   - line-height: helps center text vertically if equal to height. */
+div {
+    height: 50px;                  /* Default height of the div */
+    width: 200px;                  /* Default width of the div */
+    text-align: center;            /* Horizontally center text */
+    background-color: rgb(0, 255, 183); /* Default teal background */
+    border: 2px solid black;       /* Solid border, 2px thick */
+    margin: 10px;                  /* Space around each div */
+    line-height: 50px;             /* Vertically center text (height = line-height) */
+}
+
+/* ===========================
+   Alternate Colors using nth-of-type
+   =========================== */
+/* nth-of-type() is a pseudo-class selector.
+   Common interview question: "Difference between nth-child and nth-of-type?"
+   - nth-of-type(2n): selects every 2nd element of its type (div) in the parent.
+   - nth-of-type(3n): selects every 3rd element of its type (div). */
+div:nth-of-type(2n) {
+    background-color: rgb(148, 94, 199); /* Every 2nd div is purple */
+}
+
+div:nth-of-type(3n) {
+    background-color: rgb(155, 134, 174); /* Every 3rd div is pinkish-purple */
+}
+
+/* ===========================
+   CSS Transform Examples
+   =========================== */
+/* Interview Tip: Transform does not affect document flow. 
+   It only visually transforms the element. */
+
+/* Rotate 45 degrees clockwise */
+#one {
+    transform: rotate(45deg); 
+    /* rotate(angle) rotates the element around its center point.
+       Positive angle = clockwise, negative = counter-clockwise. */
+}
+
+/* Scale down to 50% of original size */
+#two {
+    transform: scale(0.5); 
+    /* scale(factor) enlarges or reduces size.
+       scaleX(), scaleY() can scale in one direction only. */
+}
+
+/* Move left by 100px */
+#three {
+    transform: translateX(-100px); 
+    /* translateX(px) moves element along X-axis.
+       translateY(px) moves along Y-axis.
+       translate(x, y) moves both. */
+}
+
+/* Skew the div by 30 degrees along X axis */
+#four {
+    transform: skewX(30deg); 
+    /* Skew slants the element.
+       skewX(angle) = horizontal slant
+       skewY(angle) = vertical slant */
+}
+
+/* Combine rotation and translation */
+#five {
+    transform: rotate(30deg) translateX(150px); 
+    /* Multiple transforms are applied from right to left.
+       Here: translateX first, then rotate. */
+}
+
+/* ===========================
+   Box Shadow Example
+   =========================== */
+/* box-shadow is often asked in interviews: "Explain the values?"
+   Syntax: box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color inset;
+   Spread-radius and inset are optional. */
+#six {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(219, 246, 18); /* Bright yellow for visibility */
+    margin: 10px auto;                    /* Horizontally center div */
+    line-height: 50px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0); 
+    /* x-offset: 2px, y-offset: 2px, blur: 8px, color: black
+       Creates a subtle 3D/floating effect */
+}
+
+/* ===========================
+   Background Image with 'contain'
+   =========================== */
+/* Background-size and positioning are common interview questions:
+   - contain: entire image fits inside container, maintains aspect ratio, may leave empty space.
+   - cover: fills container completely, maintains aspect ratio, may crop image.
+   - auto: original image size. */
+#Seven {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    background-color: rgb(219, 246, 18);
+    margin-top: 100px;
+    background-image: url(bg.png); /* Image file */
+    background-size: contain;      /* Scale image to fit inside div */
+    background-repeat: no-repeat;  /* Prevent repeating the image */
+    background-position: center;   /* Center image in the div */
+}
+
+/* ===========================
+   Background Image with 'cover'
+   =========================== */
+#eight {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    background-color: rgb(219, 246, 18);
+    margin-top: 10px;
+    background-image: url(bg.png);
+    background-size: cover;        /* Image fills div completely */
+    background-repeat: no-repeat;
+    background-position: center;   /* Center image */
+}
+
+/* ===========================
+   Background Image with 'auto'
+   =========================== */
+#nine {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    background-color: rgb(219, 246, 18);
+    margin-top: 10px;
+    background-image: url(bg.png);
+    background-size: auto;         /* Original image size */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ===========================
+   Key Interview Notes Summary
+   =========================== */
+/*
+1. CSS Transforms:
+   - Do not affect layout (document flow)
+   - Types: rotate, scale, translate, skew
+   - Can combine multiple transforms
+   - Common Q: Difference between relative positioning and transform translation
+
+2. Box Shadow:
+   - x-offset: horizontal shift
+   - y-offset: vertical shift
+   - blur-radius: how soft the shadow edge is
+   - color: shadow color
+   - spread-radius & inset optional
+
+3. Background Images:
+   - background-size: contain / cover / auto
+   - background-repeat: repeat / no-repeat
+   - background-position: center, top, bottom, left, right
+   - Useful for responsive design
+
+4. nth-of-type():
+   - Select elements of the same type
+   - Often confused with nth-child()
+   - nth-child counts all children, nth-of-type counts only the type
+*/

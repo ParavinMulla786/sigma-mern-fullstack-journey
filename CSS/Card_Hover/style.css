@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.card {
+    width: 220px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card .des {
+    padding: 15px;
+}
+
+.card .des h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.card .des p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
