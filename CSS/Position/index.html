@@ -2,20 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes website responsive on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>CSS Position Demo</title>
+
+    <!-- Connecting CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- =============================
+     STATIC POSITION DEMO
+     ============================= -->
 <section>
+
+    <!-- Heading -->
     <h2>Static Demo</h2>
+
+    <!-- Normal div -->
     <div></div>
+
+    <!--
+    This div uses STATIC position.
+    Static is the DEFAULT position of all HTML elements.
+    It follows normal document flow.
+    top, left, right, bottom properties DO NOT work here.
+    -->
     <div id="static"></div>
+
 </section>
+
+
+
+<!-- =============================
+     RELATIVE POSITION DEMO
+     ============================= -->
 <section>
-    <h2>Relativ Demo</h2>
+
+    <h2>Relative Demo</h2>
+
+    <!-- Normal div -->
     <div></div>
+
+    <!--
+    Relative position moves element relative
+    to its ORIGINAL position.
+
+    It still keeps its original space in layout.
+    -->
     <div id="Relative"></div>
+
 </section>
+
+
+
+<!-- =============================
+     ABSOLUTE POSITION DEMO
+     ============================= -->
+<section>
+
+    <h2>Absolute Demo</h2>
+
+    <div></div>
+
+    <!--
+    Absolute position removes the element
+    from normal document flow.
+
+    It positions relative to the nearest
+    positioned parent (relative/absolute/fixed).
+
+    If no positioned parent exists,
+    it moves relative to the BODY.
+    -->
+    <div id="Absolute"></div>
+
+</section>
+
+
+
+<!-- =============================
+     FIXED POSITION DEMO
+     ============================= -->
+<section>
+
+    <h2>Fixed Demo</h2>
+
+    <div></div>
+
+    <!--
+    Fixed position stays fixed on screen.
+
+    It does NOT move when the page scrolls.
+
+    Used for:
+    Navbar
+    Chat buttons
+    Floating buttons
+    -->
+    <div id="Fixed"></div>
+
+</section>
+
 </body>
 </html>

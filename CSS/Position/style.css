@@ -1,22 +1,122 @@
+
+/* ==================================
+   General Styling for all DIV boxes
+   ================================== */
+
 div{
+
+    /* Box height */
     height:100px ;
-    width: 100px;
-    background-color:rgb(7, 113, 34) ;
-    text-align: center;
-    border: 3px solid black ;
-    margin: 20px;
-    display: inline-block;
-    
+
+    /* Box width */
+    width:100px;
+
+    /* Green background */
+    background-color:rgb(7, 113, 34);
+
+    /* Center text inside box */
+    text-align:center;
+
+    /* Border around box */
+    border:3px solid black;
+
+    /* Space outside the box */
+    margin:20px;
+
+    /* Allows boxes to sit side-by-side */
+    display:inline-block;
 }
+
+
+
+/* ==================================
+   STATIC POSITION
+   ================================== */
+
 #static{
-    position: static;
-    background-color: yellow;
-    top: 100px;
-    left: 100px;
+
+    /* Static is the DEFAULT position */
+    position:static;
+
+    background-color:yellow;
+
+    /* These properties DO NOT work with static */
+    top:100px;
+    left:100px;
+
 }
+
+
+
+/* ==================================
+   RELATIVE POSITION
+   ================================== */
+
 #Relative{
-    position: relative;
-    background-color: yellow;
-    
+
+    /* Element moves relative to its original place */
+    position:relative;
+
+    background-color:yellow;
+
+    /* Moves 100px DOWN from its original position */
+    top:100px;
+
+    /* Moves 100px RIGHT from its original position */
+    left:100px;
+
+}
+
+
+
+/* ==================================
+   ABSOLUTE POSITION
+   ================================== */
+
+#Absolute{
+
+    /*
+    Absolute removes element from
+    normal document flow
+    */
+
+    position:absolute;
+
+    background-color:yellow;
+
+    /*
+    Moves element from the nearest
+    positioned parent.
+    If no parent -> relative to body
+    */
+
+    top:100px;
+    left:100px;
+
+}
+
+
+
+/* ==================================
+   FIXED POSITION
+   ================================== */
+
+#Fixed{
+
+    /*
+    Fixed element stays in same place
+    even when page scrolls
+    */
+
+    position:fixed;
+
+    background-color:yellow;
+
+    /*
+    Positioned relative to browser window
+    */
+
+    top:100px;
+    left:100px;
 
 }

@@ -1,0 +1,79 @@
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+    font-family:Arial;
+}
+
+h1{
+    margin-bottom:40px;
+}
+
+/* FACE */
+
+.face{
+    width:400px;
+    height:400px;
+    background:#ffeb3b;
+    border-radius:50%;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+/* EYES */
+
+.eye{
+    width:60px;
+    height:60px;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    top:110px;
+}
+
+.left-eye{
+    left:110px;
+}
+
+.right-eye{
+    right:110px;
+}
+
+/* MOUTH */
+
+.mouth{
+    width:200px;
+    height:90px;
+    background:#6b1b1b;
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:0 0 100px 100px;
+    transition:0.4s;
+}
+
+/* HOVER EFFECT */
+
+.face:hover .mouth{
+    height:120px;
+}
+
+/* EYE BLINK ANIMATION */
+
+@keyframes blink{
+    0%,90%,100%{
+        height:60px;
+    }
+    95%{
+        height:5px;
+    }
+}
+
+.eye{
+    animation:blink 4s infinite;
+}
