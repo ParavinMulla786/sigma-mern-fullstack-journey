@@ -1,6 +1,8 @@
 import React from "react";
 import StudentCart from "./componets/StudentCart";
 import Navbar from "./componets/Navbar";
+import Agecheker from "./componets/Agecheker";
+import AddCss from "./componets/AddCss";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         college="NMCOE"
         course="BTech"
       />
+      <Agecheker/>
+      <AddCss/>
     </>
   );
 }
