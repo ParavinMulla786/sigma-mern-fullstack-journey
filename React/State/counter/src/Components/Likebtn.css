@@ -1,0 +1,17 @@
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    color: red;
+    margin: 20px;
+    height: 20px;
+    cursor: pointer;       
+}
+
+.containerlike {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: larger;
+    font-weight: 500;
+}
